@@ -1,1 +1,3 @@
-﻿Console.WriteLine("wlcome to program for probelm using generics");
+﻿using ProblemUsingGenerics;
+genrics num = new genrics();
+num.greatest(875,875,45);
