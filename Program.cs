@@ -1,3 +1,7 @@
 ﻿using ProblemUsingGenerics;
-genrics num = new genrics();
-num.greatest(0.001,0.005,0.002);
+Calculate<int> greatest = new Calculate<int>();
+greatest.Comparison(230, 543, 565);
+Calculate<string> great = new Calculate<string>();
+great.Comparison("Apple", "Peach", "banana");
+Calculate<float> greatTwo = new Calculate<float>();
+greatTwo.Comparison(1.00002F, 2.001F, 1.001F);

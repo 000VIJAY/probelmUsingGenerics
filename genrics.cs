@@ -7,21 +7,21 @@ using System.Collections;
 
 namespace ProblemUsingGenerics
 {
-    public class genrics
+    public class Calculate<uType> where uType : IComparable
     {
-        public void greatest(double a,double b,double c)
+        public void Comparison(uType a, uType b, uType c )
         {
-            if (a.CompareTo(b) >0 && a.CompareTo(c) > 0)
+            if (a.CompareTo(b) >0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) > 0)
             {
-                Console.WriteLine("Greatest name: {0}",a);
+                Console.WriteLine("Greatest : {0}",a);
             }
-            else if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0)
+            else if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) > 0)
             {
-                Console.WriteLine("Greatest name: {0}", b);
+                Console.WriteLine("Greatest : {0}", b);
             }
-            else if (c.CompareTo(b) > 0 && c.CompareTo(a) > 0)
+            else if (c.CompareTo(b) > 0 && c.CompareTo(a) > 0 || c.CompareTo(b) > 0 && c.CompareTo(a) > 0 || c.CompareTo(b) > 0 && c.CompareTo(a) > 0)
             {
-                Console.WriteLine("Greatest name: {0}", c);
+                Console.WriteLine("Greatest : {0}", c);
             }
             else
             {
