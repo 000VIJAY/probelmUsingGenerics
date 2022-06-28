@@ -9,7 +9,7 @@ namespace ProblemUsingGenerics
 {
     public class genrics
     {
-        public void greatest(string a,string b,string c)
+        public void greatest(double a,double b,double c)
         {
             if (a.CompareTo(b) >0 && a.CompareTo(c) > 0)
             {
