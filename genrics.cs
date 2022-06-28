@@ -9,35 +9,23 @@ namespace ProblemUsingGenerics
 {
     public class genrics
     {
-        public void greatest(int a,int b,int c)
+        public void greatest(string a,string b,string c)
         {
-            if (a > b && a > c)
+            if (a.CompareTo(b) >0 && a.CompareTo(c) > 0)
             {
-                Console.WriteLine("Greatest number: {0}",a);
+                Console.WriteLine("Greatest name: {0}",a);
             }
-            else if (b > a && b > c)
+            else if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0)
             {
-                Console.WriteLine("Greatest number: {0}", b);
+                Console.WriteLine("Greatest name: {0}", b);
             }
-            else if (c > a && c > b)
+            else if (c.CompareTo(b) > 0 && c.CompareTo(a) > 0)
             {
-                Console.WriteLine("Greatest number: {0}", c);
-            }
-            else if (a == b)
-            {
-                Console.WriteLine(+a + " is equal to " + b + " both number is maximum");
-            }
-            else if (a == c)
-            {
-                Console.WriteLine(+a + " is equal to " + c + " both number is maximum");
-            }
-            else if (b == c)
-            {
-                Console.WriteLine(+b + " is equal to  " + c + " both number is maximum");
+                Console.WriteLine("Greatest name: {0}", c);
             }
             else
             {
-                Console.WriteLine("All three numbers are equal");
+                Console.WriteLine("All three numbers are equal or greatest two are equal");
             }
         }
     }
