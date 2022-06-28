@@ -9,7 +9,16 @@ namespace ProblemUsingGenerics
 {
     public class Calculate<uType> where uType : IComparable
     {
-        public void Comparison(uType a, uType b, uType c )
+        uType a;
+        uType b;
+        uType c;
+        public Calculate(uType a, uType b, uType c)   //constructor
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+        public void Comparison()
         {
             if (a.CompareTo(b) >0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) > 0)
             {

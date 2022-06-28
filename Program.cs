@@ -1,7 +1,7 @@
 ﻿using ProblemUsingGenerics;
-Calculate<int> greatest = new Calculate<int>();
-greatest.Comparison(230, 543, 565);
-Calculate<string> great = new Calculate<string>();
-great.Comparison("Apple", "Peach", "banana");
-Calculate<float> greatTwo = new Calculate<float>();
-greatTwo.Comparison(1.00002F, 2.001F, 1.001F);
+Calculate<int> greatest = new Calculate<int>(120,230,345);
+greatest.Comparison();
+Calculate<string> great = new Calculate<string>("Apple", "Peach", "banana");
+great.Comparison();
+Calculate<float> greatTwo = new Calculate<float>(0.00002F, 1.001F, 3.001F);
+greatTwo.Comparison();
