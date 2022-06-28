@@ -9,32 +9,24 @@ namespace ProblemUsingGenerics
 {
     public class Calculate<uType> where uType : IComparable
     {
-        uType a;
-        uType b;
-        uType c;
-        public Calculate(uType a, uType b, uType c)   //constructor
+        uType[] a;    //variable
+        public Calculate(params uType[] array)   //constructor
         {
-            this.a = a;
-            this.b = b;
-            this.c = c;
+            this.a = array;
         }
-        public void Comparison()
+        public void sort()
         {
-            if (a.CompareTo(b) >0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) > 0)
+            Array.Sort(this.a);
+        }
+        public uType Comparison()
+        {
+            return a[a.Length-1];
+        }
+        public void Show()
+        {
+            foreach (var uType in a)
             {
-                Console.WriteLine("Greatest : {0}",a);
-            }
-            else if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) > 0)
-            {
-                Console.WriteLine("Greatest : {0}", b);
-            }
-            else if (c.CompareTo(b) > 0 && c.CompareTo(a) > 0 || c.CompareTo(b) > 0 && c.CompareTo(a) > 0 || c.CompareTo(b) > 0 && c.CompareTo(a) > 0)
-            {
-                Console.WriteLine("Greatest : {0}", c);
-            }
-            else
-            {
-                Console.WriteLine("All three numbers are equal or greatest two are equal");
+                Console.WriteLine("value:" +uType);
             }
         }
     }

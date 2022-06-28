@@ -1,7 +1,20 @@
 ﻿using ProblemUsingGenerics;
-Calculate<int> greatest = new Calculate<int>(120,230,345);
+
+int[] num = new int[3] { 10, 45, 543 };
+string[] name = new string[6] { "Vijay", "Abdul", "Rahul", "Vinay", "Nitish", "Yadav" };
+float[] numOne = new float[5] { 0.02F, 0.03F, 1.05F, 2.08F, 1.8F };
+Calculate<int> greatest = new Calculate<int>(num);
+greatest.sort();
 greatest.Comparison();
-Calculate<string> great = new Calculate<string>("Apple", "Peach", "banana");
+greatest.Show();
+Console.WriteLine("biggest:" + greatest.Comparison());
+Calculate<string> great = new Calculate<string>(name);
+great.sort();
 great.Comparison();
-Calculate<float> greatTwo = new Calculate<float>(0.00002F, 1.001F, 3.001F);
+great.Show();
+Console.WriteLine("biggest:" + great.Comparison());
+Calculate<float> greatTwo = new Calculate<float>(numOne);
+greatTwo.sort();
 greatTwo.Comparison();
+greatTwo.Show();
+Console.WriteLine("biggest:" +greatTwo.Comparison());
